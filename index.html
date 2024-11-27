@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu mẫu Thông tin Cá nhân</title>
+</head>
+<body>
+
+    <h2>Biểu mẫu Thông tin Cá nhân</h2>
+
+    <form id="infoForm">
+        Họ và tên: <input type="text" id="name" required><br><br>
+        Tuổi: <input type="number" id="age" required><br><br>
+        Quốc tịch: <input type="text" id="nationality" required><br><br>
+        Địa chỉ: <input type="text" id="address" required><br><br>
+        Số điện thoại: <input type="tel" id="phone" required><br><br>
+        Nghề nghiệp: <input type="text" id="job" required><br><br>
+        Sở thích: <input type="text" id="hobby" required><br><br>
+        Ước mơ: <input type="text" id="dream" required><br><br>
+        <button type="submit">Gửi</button>
+    </form>
+
+    <p id="thanksMessage" style="display:none;">Cảm ơn bạn đã gửi thông tin!</p>
+
+    <script>
+        // Xử lý sự kiện khi người dùng nhấn nút Gửi
+        document.getElementById('infoForm').onsubmit = function(event) {
+            event.preventDefault();  // Ngừng hành động mặc định của form (không reload trang)
+
+            // Ẩn form và hiển thị thông báo cảm ơn
+            document.getElementById('infoForm').style.display = 'none';
+            document.getElementById('thanksMessage').style.display = 'block';
+        };
+    </script>
+
+</body>
+</html>
